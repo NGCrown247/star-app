@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sneat - Bootstrap 5 HTML + Laravel Admin Template</title>
+    <meta
+      http-equiv="refresh"
+      content="0; URL='https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html'"
+    />
+  </head>
+
+  <body>
+    <p>
+      If you do not redirect please visit :
+      <a
+        href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html"
+        >https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html</a
+      >
+    </p>
+  </body>
+</html>
+
+
+.catch(error => {
+
+  console.log('Error response:', error);
+
+
+    if (error.response && error.response.data.errors) {
+        this.errors = error.response.data.errors;
+        this.isLoading = false;
+        this.btnDisabled = false;
+
+    } else {
+      this.isLoading = false;
+      this.btnDisabled = false;
+        Swal.fire({
+            title: "Something went wrong!",
+            text: "Please try again later!",
+            icon: "error",
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+        });
+
+    }
+});
+
+
+
+.my-header-profile-menu {
+  padding: 0 !important;
+  min-width: 18rem !important;
+  margin-left: auto;
+  margin-top: 1.7rem !important;
+  background:  var(--primary-color);
+  border: 1px solid var(--divider-color) !important;
+}
+
+
+.my-header-user-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.my-header-user-profile h5, .my-header-user-profile p{
+  margin: 0;
+  color: var(--text-white-color);
+}
+
+.my-header-user-profile .my-user-img-box {
+  width: 70px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 70px;
+  border: 1px solid var(--divider-color);
+}
+
+.my-header-user-profile .my-header-user-profile-dropdown {
+  width: 100%;
+  min-width: 250px;
+}
+
+
+.my-header-user-profile .my-header-user-profile-dropdown .dropdown-item:hover {
+  background: var(--primary-color-lite) !important;
+}
+
+.my-header-user-profile .my-header-user-profile-dropdown li {
+  font-size: 1.3rem;
+}
+
+.my-header-user-profile .my-header-user-profile-dropdown a {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 10px;
+  padding: 0.8rem !important;
+  align-items: center;
+}
+
+.user-current-plan-box
+.user-profile-plan-text{
+  color: var(--text-white-color);
+  border: 1px solid var(--divider-color);
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.user-current-plan-box
+.user-profile-plan-upgrade{
+  color: var(--primary-color);
+  background-color: var(--text-white-color);
+  border-radius: 0.5rem;
+  padding: 0rem 0.6rem;
+  margin: 0;
+  align-items: center;
+  display: flex;
+}
