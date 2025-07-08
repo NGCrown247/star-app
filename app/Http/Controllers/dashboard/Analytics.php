@@ -12,3 +12,6 @@ class Analytics extends Controller
     return view('content.dashboard.dashboards-analytics');
   }
 }
+
+
+

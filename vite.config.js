@@ -60,5 +60,17 @@ export default defineConfig({
       refresh: true
     }),
     html()
-  ]
+  ],
+
+
+      server: {
+  // host: '0.0.0.0',
+   host: 'localhost',
+  hmr: {
+    host: 'localhost'
+      // host: '192.168.0.162',  //main
+    //   host: '192.168.192.231',
+  }
+}
+
 });

@@ -23,8 +23,8 @@ class PlanSeeder extends Seeder
         'Benefit_header' => 'Benefits',
         'watch_video' => 'Watch Videos',
         'play_music' => 'Play Music',
-        'countDown_engagement' => 'CountDown EG',
-        'countDown_engagement_warning' => 'Note your device screen must ON',
+        'read_article' => 'Read Article',
+
         'task_point'=> 1,
         'plan_tier'=>1,
         'created_by' => 1,
@@ -40,8 +40,8 @@ class PlanSeeder extends Seeder
         'Benefit_header' => 'Benefits',
         'watch_video' => 'Watch Videos',
         'play_music' => 'Play Music',
-        'countDown_engagement' => 'CountDown EG',
-        'countDown_engagement_warning' => 'Note your device screen must ON',
+        'read_article' => 'Read Article',
+
         'task_point'=> 2,
         'created_by' => 1,
         'plan_tier'=>2,
@@ -57,8 +57,8 @@ class PlanSeeder extends Seeder
         'Benefit_header' => 'Benefits',
         'watch_video' => 'Watch Videos',
         'play_music' => 'Play Music',
-        'countDown_engagement' => 'CountDown EG',
-        'countDown_engagement_warning' => 'Note your device screen must ON',
+        'read_article' => 'Read Article',
+
         'task_point'=> 3,
         'plan_tier'=>3,
         'created_by' => 1,

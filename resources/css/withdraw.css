@@ -1,0 +1,62 @@
+.withdrawal-container {
+    max-width: 40rem;
+}
+
+.withdrawal-method-card {
+    background: var(--white);
+}
+
+.withdrawal-method-card img {
+    width: 1.2rem;
+}
+
+.withdrawal-method-form-wrapper-1 {
+    display: block;
+}
+
+.withdrawal-method-form-wrapper-1.active {
+    display: none;
+}
+
+
+
+
+.withdrawal-method-form-wrapper-2 {
+    display: none;
+}
+
+.withdrawal-method-form-wrapper-2.active {
+    display: block;
+}
+
+
+.available-balance-wrapper {
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+.withdrawal-method-wrapper {
+    /* max-width: ; */
+    /* background: #000; */
+}
+
+
+@media(max-width: 600px) {
+    .withdrawal-method-items-wrapper {
+        flex-wrap: wrap;
+        transition: all 1s ease-in-out;
+    }
+
+    .p-wrap {
+        margin-top: 1rem !important;
+    }
+
+    .withdrawal-twin-input,
+    .withdrawal-method-wrapper{
+        flex-wrap: wrap;
+    }
+}

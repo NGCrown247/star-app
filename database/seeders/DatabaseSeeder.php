@@ -22,7 +22,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@app.com',
             'role'=>Constants::ADMIN,
             'phone_number'=>"0804949595",
-            'address'=>'address',
             "status"=>Constants::ACTIVE,
             "password"=>Hash::make("password")
 
@@ -35,7 +34,7 @@ class DatabaseSeeder extends Seeder
             PlanSeeder::class
         ]);
 
-      
+
 
 
 

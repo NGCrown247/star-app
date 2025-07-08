@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('full_name');
             $table->string('email')->unique();
             $table->string('phone_number');
-            $table->string('address');
             $table->enum('status',[Constants::ACTIVE,Constants::INACTIVE,Constants::DEACTIVATED,Constants::BANNED]);
             $table->string('role');
             $table->string('image')->default('no photo');

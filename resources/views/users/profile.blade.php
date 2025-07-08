@@ -1,177 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Profile</title>
 
-  @extends('layouts.app')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+
+    @include('layouts.app')
+
 </head>
 
 <body>
 
-  <div class="my-dash-wrapper">
 
-  @include('layouts.header')
-
-
-  <div class="my-container" x-data="userApp">
-  <div class="my-dash-row p-4">
-
-    <div class="my-main-profile-content p-4 w-100 border rounded align-items-center  justify-content-center">
-
-      <h4 class="referral-header w-100 text-center mb-3">Profile</h4>
-
-      <div class="my-user-profile-edit-head w-100 align-items-center d-flex flex-column">
-
-        <div class="my-dash-user-dropdown-content w-100 d-flex flex-column align-items-center">
-
-          <div class="all-img-box profile-img-box">
-            <img src="{{asset(Auth::user()->image)}}" alt="user">
-        </div>
-
-        <h6 class="m-0 mt-1">{{ Auth::user()->full_name }}</h6>
-        <p class="" >{{ Auth::user()->email}}</p>
+    <div class="global-container d-flex flex-column w-100 align-items-center">
+            @include('layouts.navbar')
+            @include('layouts.sidebar')
 
 
-      </div>
+        <div class="pages-row d-flex w-100 flex-column p-2 mt-2 mb-3 align-items-center rounded">
 
-      <label for="profile-image" class="rounded border p-1 px-3 text-white bg-secondary  ">Upload</label>
-      <input
-      type="file" id="profile-image"
-      class="m-auto rounded border p-1"
-      @change="setFile($event)"
-      style="display: none">
-      </div>
+            <div class="user-edit-profile-wrapper shadow rounded-1 p-4  w-100">
+              <h5 class="edit-profile-change-password-header w-100 text-center mb-5">Edit Profile</h5>
 
 
-        <div class="my-user-profile-edit-form-box w-100 mt-5 rounded">
+                <div class="user-details-wrapper d-flex flex-column align-items-center gap-3 flex-wrap w-100">
+                    <div class="user-img-wrapper shadow-lg">
+                        <img src="images/lady-open-mouth.jpg" alt="">
+                    </div>
+                    <div class="upload-image-wrapper">
+                        {{-- <label for="upload-image">Change</label> --}}
+                        <input type="file" class="input-field profile-input rounded-1" id="upload-image">
+                    </div>
 
-          <div class="form-group w-100 mt-3">
-            <input type="text"
-            class="form-control "
-            :class="{'border border-danger bg-danger bg-opacity-10 ': errors.full_name}"
-            placeholder="Full name"
-            x-model="userForm.full_name"
-            autocomplete="full_name">
-          </div>
-          <span class="error-message text-danger ms-2 " x-text="errors.full_name"></span>
-
-          <div class="form-group w-100">
-            <input type="email"
-                   class="form-control "
-                   :class="{'border border-danger bg-danger bg-opacity-10 ': errors.email}"
-                   name="email"
-                   placeholder="Email"
-                   x-model="userForm.email"
-                   autocomplete="email">
-        </div>
-        <span class="error-message text-danger ms-2 " x-text="errors.email ? errors.email[0] : ''"></span>
-
-        <div class="form-group w-100">
-          <input type="tel"
-          class="form-control "
-          :class="{'border border-danger bg-danger bg-opacity-10 ': errors.phone_number}"
-          value="{{ old('phone_number') }}"
-          placeholder="Phone number"
-          x-model="userForm.phone_number"
-          autocomplete="phone_number">
-        </div>
-        <span class="error-message text-danger ms-2 " x-text="errors.phone_number"></span>
+                    <div class="user-details d-flex flex-column align-items-center">
+                        <h6>Frank Aluka</h6>
+                        <p>frank@gmail.com</p>
+                    </div>
+                </div>
+            </div>
 
 
-        <div class="form-group w-100">
-          <input type="text"
-          class="form-control "
-          :class="{'border border-danger bg-danger bg-opacity-10 ': errors.address}"
-          value="{{ old('address') }}"
-          placeholder="Address"
-          x-model="userForm.address"
-          autocomplete="address">
-        </div>
-        <span class="error-message text-danger ms-2 " x-text="errors.address"></span>
+            <div class="user-edit-profile-wrapper shadow w-100 mt-3 p-4 rounded-1 d-flex flex-column gap-3 py-3 align-items-center">
 
-        </div>
-{{-- ------------------------------------------------ --}}
+                <!-- Full Name -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="fullname">Full name</label>
+                    <div class="position-relative w-100">
+                        <input type="text" class="input-field ps-5" placeholder="Full name"
+                            x-model="userForm.fullname" id="fullname">
+                        <i class="fa-solid fa-user input-icon"></i>
+                    </div>
+                </div>
 
-        <div class="my-user-profile-edit-password-update-box mt-3 rounded">
+                <!-- Email -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="email">Email</label>
+                    <div class="position-relative w-100">
+                        <input type="text" class="input-field ps-5" placeholder="Email" x-model="userForm.email"
+                            id="email">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                    </div>
+                </div>
 
-          <div class="form-group w-100">
-            <input type="text"
-            class="form-control "
-            :class="{'border border-danger bg-danger bg-opacity-10 ': errors.password}"
-            placeholder="Current Password"
-            x-model="userForm.password">
+                <!-- Phone Number -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="phone-number">Phone number</label>
+                    <div class="position-relative w-100">
+                        <input type="text" class="input-field ps-5" placeholder="Phone number"
+                            x-model="userForm.phone_number" id="phone-number">
+                        <i class="fa-solid fa-phone input-icon"></i>
+                    </div>
+                </div>
+            </div>
 
-          <span class="error-message text-danger ms-2" x-text="errors.password"></span>
-          </div>
 
-          <div class="form-group w-100">
-            <input type="text"
-            class="form-control "
-            :class="{'border border-danger bg-danger bg-opacity-10 ': errors.password}"
-            placeholder="New Password"
-            x-model="userForm.new_password">
 
-          <span class="error-message text-danger ms-2" x-text="errors.password"></span>
-          </div>
 
-          <div class="form-group w-100">
-            <input type="text"
-            class="form-control "
-            :class="{'border border-danger bg-danger bg-opacity-10 ': errors.password}"
-            placeholder="Confirm Password"
-            x-model="userForm.confirm_password">
 
-          <span class="error-message text-danger ms-2" x-text="errors.password"></span>
-          </div>
+            <div class="user-edit-profile-wrapper shadow p-4 rounded-1  mt-3 w-100 d-flex flex-column gap-3 align-items-center">
+
+              <h5 class="edit-profile-change-password-header">Change Password</h5>
+
+                    <!-- Password -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="pass">Password</label>
+                    <div class="position-relative w-100">
+                        <input type="password" class="input-field ps-5" placeholder="Password"
+                            x-model="userForm.password" id="pass">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+               <!-- Password -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="pass">Password</label>
+                    <div class="position-relative w-100">
+                        <input type="password" class="input-field ps-5" placeholder="Password"
+                            x-model="userForm.password" id="pass">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+                    <!--Confirm Password -->
+                <div class="input-wrapper d-flex flex-column position-relative mt-3 w-100">
+                    <label for="pass">Confirm New Password</label>
+                    <div class="position-relative w-100">
+                        <input type="password" class="input-field ps-5" placeholder="Confirm New Password"
+                            x-model="userForm.new_password" id="pass">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                    </div>
+                </div>
+
+
+
+                <button class="button-submit mt-3 rounded-1 ms-auto border-0">Save Changes</button>
+            </div>
+
+            <div class="button-wrapper mt-5 p-4">
+            <button class=" delete-btn text-light bg-danger border-0 rounded-1 p-2 px-3 me-auto">Delete Account</button>
+            <p class="mt-3 text-danger">Deleting your account is permanent and cannot be undone.</p>
+            </div>
 
         </div>
 
 
-        <button :disabled="btnDisabled" type="submit" class="btn-submit btn btn-primary mt-3 mb-3" @click="handleUpdate()">
-          <span x-show="isLoading" class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-          Update
-        </button>
 
-      </div>
+        {{-- @include('layouts.footer-copyright') --}}
 
     </div>
-
-    <div class="my-user-profile-delete-box">
-
-    <button class=" btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Account</button>
-    <p class="mb-5 text-danger">Before you delete your account Note that this action can not be undone. All asset will be lost.</p>
-    </div>
-
-  </div>
-
-{{-- DELETE MODAL --}}
-<div class="modal fade"  id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
-        <h1 class="modal-title fs-5 text-white" id="deleteModalLabel">Confirm Account Deletion</h1>
-        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Are you sure you want to delete this item? This action cannot be undone.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-
-        <form action="{{route('users.delete')}}" method="POST">
-          @csrf
-        <button type="submit" class="btn btn-danger" id="confirmDelete">Delete</button>
-        </form>
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
 
 </body>
+
 </html>

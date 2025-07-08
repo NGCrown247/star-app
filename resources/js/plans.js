@@ -38,8 +38,7 @@ export default function planApp(){
           Benefit_header: "",
           watch_video: "",
           play_music: "",
-          countDown_engagement: "",
-          countDown_engagement_warning: "",
+          read_article: "",
 
         },
 

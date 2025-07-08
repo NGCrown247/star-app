@@ -1,0 +1,253 @@
+
+.my-navbar {
+    height: 5rem;
+    backdrop-filter: blur(10px);
+    background: var(--primary-color);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+}
+
+.my-navbar-ul {
+    display: flex;
+    color: var(--white);
+}
+
+.my-navbar .my-navbar-ul a {
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.my-navbar .my-navbar-action-button-wrapper {
+    display: flex;
+}
+
+.navbar-action-button {
+    color: var(--white);
+    border: .01rem solid var(--white) !important;
+    text-transform: uppercase;
+    font-size: .7rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+
+#register {
+    color: var(--primary-color);
+    background-color: var(--white);
+
+}
+
+
+
+
+.my-hero {
+    height: 100vh;
+    background: var(--my-rgba-color),
+        url('/public/images/lady-open-mouth.jpg');
+
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-clip: border-box !important;
+    position: relative !important;
+    width: 100% !important;
+    z-index: 1 !important;
+}
+
+.my-hero .my-hero-content {
+    /* z-index: 999; */
+    height: 100%;
+}
+
+.my-hero .my-hero-content .hero-title {
+    color: var(--white);
+    font-size: clamp(3rem, 10vw, 7rem);
+    flex-wrap: wrap;
+}
+
+.my-hero .my-hero-content .hero-title .hero-title-span {
+    background: linear-gradient(var(--primary-color)40%, var(--secondary-color)55%, var(--white)50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.my-hero .my-hero-content .hero-descriptipn {
+    font-size: 1rem;
+    color: var(--white);
+    width: 70%;
+    word-spacing: .4rem;
+
+}
+
+.my-hero .my-hero-content .my-hero-action-button-box .hero-action-btn {
+    font-size: large;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--primary-color);
+
+    transition: 0.3s ease;
+    white-space: nowrap;
+
+}
+
+
+.my-hero .my-hero-content .my-hero-action-button-box #watch-how {
+    color: var(--white);
+    background-color: var(--my-transparent);
+    border: 0.01rem solid var(--primary-color);
+    box-shadow: 2px 2px 4px var(--primary-color);
+    font-weight: normal;
+    padding-inline: 2.8rem !important;
+
+
+
+}
+
+.my-hero .my-hero-content .my-hero-action-button-box .watch-how-icon-box i {
+    color: var(--white);
+    border: .1rem solid var(--primary-color);
+    border-radius: 50%;
+}
+
+.my-social-items i {
+    padding: .3rem;
+    border-radius: .1rem;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border: .01rem solid var(--x-accent-color);
+    background-color: var(--white);
+    box-shadow: 2px 2px 4px var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.my-social-items i:hover {
+    border: .01rem solid var(--white);
+    transform: scale(1.1);
+}
+
+
+/* -------------ABOUT SECTION STYLE------------------ */
+
+.my-about-section {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+
+}
+
+.my-about-header {
+    background: linear-gradient(to right, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+
+}
+
+.my-about-header-lines .about-header-lines {
+    width: 25%;
+    height: .2rem;
+    margin-top: .6rem;
+    border-radius: 1rem;
+}
+
+.my-about-header-lines .about-header-lines:nth-child(1) {
+    background-color: var(--secondary-color);
+}
+
+.my-about-header-lines .about-header-lines:nth-child(2) {
+    background-color: var(--primary-color);
+}
+
+.my-about-header-lines .about-header-lines:nth-child(3) {
+    background-color: var(--secondary-color);
+}
+
+.my-about-section-card-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 70rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+}
+
+.my-about-section-card {
+    background: linear-gradient(var(--white)0%, var(--primary-lite-color)100%);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    height: clamp(8rem, 13vw, 25rem);
+    width: clamp(20rem, 20vw, 30rem);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.my-about-section-card .my-about-section-card-title {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+
+.my-about-section-card .my-about-section-card-description {
+    color: var(--secondary-color);
+    width: 100%;
+    font-size: clamp(.6rem, 1.1vw, 1rem);
+
+}
+
+/* ------------FOOTER STYLE---------------------- */
+
+.my-footer {
+
+    background: linear-gradient(var(--primary-color));
+
+}
+
+.my-footer-description {
+    color: var(--white);
+}
+
+.my-footer a {
+    color: var(--white);
+}
+
+.my-footer .footer-plan-title {
+    color: var(--white);
+}
+
+
+
+.my-footer-important-box .important-links a {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.my-footer-important-box h4{
+  font-size: 1rem !important;
+  /* color: var(--secondary-lite-color); */
+  font-weight: normal;
+}
+
+#scrollUpBtn {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    background-color: var(--primary-color);
+    border: 0.01rem solid var(--white);
+    color: var(--white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}

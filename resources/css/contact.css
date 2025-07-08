@@ -1,0 +1,29 @@
+
+
+
+.contact-us-right-wrapper{
+    background: var(--white);
+    color: var(--secondary-color);
+    max-width: 25rem;
+}
+
+
+.contact-us-left-wrapper{
+    color: var(--secondary-color);
+}
+
+.contact-us-left-wrapper
+.contact-us-items h5{
+    color: var(--primary-color);
+}
+
+
+
+.whatsapp-num{
+    color: var(--primary-color);
+}
+
+.contact_message{
+    background: var(--card-black) !important;
+
+}

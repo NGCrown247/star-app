@@ -115,4 +115,5 @@ Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('
 Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic');
 
 
-require __DIR__."/user-routes.php";
+// require __DIR__."/user-routes.php";
+require __DIR__."/user.php";

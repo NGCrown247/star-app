@@ -1,0 +1,31 @@
+
+
+.table{
+    background: var(--lite-white);
+    font-size: 0.8rem;
+}
+
+tbody{
+    border: 1px solid var(--secondary-color) !important;
+}
+
+.trans-success{
+    color: var(--bs-success) !important;
+}
+
+thead th {
+    color: var(--primary-color) !important;
+}
+
+caption, th{
+    color: var(--white) !important;
+}
+
+.table-scroll-arrows-wrapper img{
+    width: 1rem;
+}
+
+.search-btn{
+    background: var(--primary-lite-color) !important;
+    color: var(--primary-color) !important;
+}

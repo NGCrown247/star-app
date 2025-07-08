@@ -19,11 +19,11 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
           // Check the user's role and redirect accordingly
           if (Auth::user()->role === 'admin') {
-              return response()->json(['success' => true, 'redirect' => route('admin.dashboard')],200);
+              return response()->json(['success' => true, 'redirect' => route('dashboard')],200);
           }
 
           if (Auth::user()->role === 'user') {
-              return response()->json(['success' => true, 'redirect' => route('users.dashboard')],200);
+              return response()->json(['success' => true, 'redirect' => route('dashboard')],200);
           }
 
           // Optional: handle roles that do not match either 'admin' or 'user'

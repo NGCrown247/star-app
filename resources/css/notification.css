@@ -1,0 +1,44 @@
+.accordion-btn {
+  background: transparent !important;
+  padding: 1rem;
+  box-shadow: none !important;
+  align-items: flex-start;
+}
+
+
+
+/* Collapsed state */
+.collapsed .notification-details-wrap p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* max-height: 2.2rem; */
+}
+
+.notification-details-title-wrap
+.notification-time-date small{
+    font-size: 0.9rem;
+}
+.notification-details-title-wrap h6{
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+.notification-details-wrap p{
+    font-size: 1rem;
+    text-align: start;
+    letter-spacing: 0.03rem;
+    word-spacing: 0.2rem;
+    line-height: 1.4rem;
+}
+.notification-details-wrap p span{
+    font-size: 0.9rem;
+    text-align: start;
+    letter-spacing: 0.03rem;
+}
+
+.accordion-btn:hover{
+    background: none !important;
+
+}

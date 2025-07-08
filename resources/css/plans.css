@@ -1,0 +1,104 @@
+
+
+.plan-wrapper{
+
+}
+
+.plan-header-text-wrapper h4,
+.plan-header-text-wrapper p{
+    color: var(--primary-color);
+    font-size: 2rem;
+
+}
+
+
+
+.plan-header-text-wrapper p:nth-of-type(1){
+    font-size: 1.2rem;
+}
+
+.plan-card-header
+.plan-text{
+    min-width: 4rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.plan-card-amount h3{
+    font-size: 2.5rem;
+}
+
+.plan-wrapper p{
+    font-size: 1rem;
+}
+
+.plan-card{
+    max-width: 18rem;
+    color: var(--primary-color);
+    /* background: linear-gradient(var(--primary-color), var(--secondary-color)); */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(40px);
+    border: 0.01rem solid var(--primary-color);
+    z-index: 10 !important;
+}
+
+.plan-card button{
+    color: var(--white);
+    background: var(--white);
+    cursor: pointer !important;
+    border: none !important;
+}
+
+
+.advantages i{
+    border: 0.01rem solid var(--primary-color);
+    border-radius: 3rem;
+}
+
+.daily-earning-wrapper span{
+    font-size: 1rem;
+}
+
+
+/* PAYMENT METHOD */
+
+.payment-method-card{
+    background: var(--white);
+    cursor: pointer;
+}
+
+.payment-card-methods-img-wrapper{
+    max-width: 11.3rem;
+
+}
+.payment-card-methods-img-wrapper img{
+    max-width: 1.2rem;
+
+}
+
+.payment-method-card:nth-of-type(2) .payment-card-methods-img-wrapper img {
+    max-width: 1.3rem;
+}
+
+.flutterwave-p-img img{
+    max-width: 1.2rem;
+
+}
+
+.account-details-items{
+    max-width: 20rem;
+    margin: auto;
+    font-size: 0.9rem;
+}
+.account-details-items .copy{
+    background: none !important;
+}
+
+.amount-to-pay{
+    background: var(--primary-lite-color);
+    max-width: 20rem;
+    color: var(--primary-color);
+
+}
+
+

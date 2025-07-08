@@ -1,0 +1,151 @@
+.invite-box-wrapper {
+    /* background: radial-gradient(circle at right 100%, var(--primary-color) 20%, var(--secondary-color) 10%); */
+    border: 0.01rem solid var(--lite-white);
+}
+
+.invite-link-box {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.invite-link-input {
+    border: none;
+    background: var(--primary-lite-color);
+    color: var(--primary-color);
+    width: 100%;
+    max-width: 20rem;
+}
+
+.invite-link-copy-btn {
+        background: linear-gradient(var(--primary-color), var(--secondary-color)) !important;
+
+}
+
+.invite-link-copy-btn i {
+    color: var(--white) !important;
+    font-size: 1.3rem;
+}
+
+.invite-social-wrapper .invite-social-icon-wrapper i {
+    border: 0.01rem solid var(--primary-color);
+    padding: 0.2rem;
+    font-size: 1.3rem;
+}
+
+.invite-social-wrapper p {
+    color: var(--primary-color);
+}
+
+.invite-social-wrapper .invite-social-icon-wrapper a:nth-child(1) {
+    color: var(--success-color);
+}
+
+.invite-social-wrapper .invite-social-icon-wrapper a:nth-child(2) {
+    color: var(--blue-color);
+}
+
+.invite-social-wrapper .invite-social-icon-wrapper a:nth-child(3) {
+    color: var(--sky-color);
+}
+
+.invite-social-wrapper .invite-social-icon-wrapper a:nth-child(4) {
+    color: var(--danger-color);
+}
+
+
+.invited-users-wrapper {
+    background: radial-gradient(circle at right 100%, var(--primary-color) 50%, var(--secondary-color) 10%);
+    border: 0.01rem solid var(--lite-white);
+}
+
+.invited-users-wrapper .invited-users-item {
+    color: var(--white);
+    /* padding-inline: 2rem !important; */
+}
+
+.invited-users-wrapper .invited-users-item i {
+    font-size: 4rem
+}
+
+.invited-users-wrapper .invited-users-item p {
+    color: var(--white);
+    white-space: nowrap;
+}
+
+
+/* HOW IT WORKS */
+
+.how-it-works-header-text {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+
+}
+
+
+
+.invite-how-it-work-wrapper .by-proceeding-text {
+    color: var(--secondary-color);
+}
+
+.invite-how-it-work-wrapper .list-group {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.invite-how-it-work-wrapper .list-group .list-group-item {
+    border: 0;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+
+
+}
+
+.invite-how-it-work-wrapper .list-group .list-group-item p {
+    font-weight: normal;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-top: 0.3rem !important;
+}
+
+.by-proceeding-text {
+    max-width: 30rem;
+}
+
+
+/* INVITEES TABLE */
+
+table{
+    background: transparent !important;
+}
+
+.invitee-table-friends-text {
+     color: var(--secondary-color);
+     font-size: 1.2rem;
+}
+
+.table th, tr,td {
+    background: transparent !important;
+    border: 0 !important;
+    white-space: nowrap;
+}
+thead th{
+    color: var(--primary-color) !important;
+}
+
+
+.table td {
+    white-space: normal;
+    word-break: break-word;
+    white-space: nowrap;
+    width: 30%;
+}
+
+
+.invitee-table-wrapper{
+    background: var(--white);
+}
+

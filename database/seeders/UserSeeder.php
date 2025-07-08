@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    
+
     public function run(): void
     {
         for ($i = 0; $i < 5; $i++) {
@@ -21,7 +21,6 @@ class UserSeeder extends Seeder
                 'full_name' => fake()->name(),
                 'email' => fake()->unique()->safeEmail(),
                 'phone_number' => fake()->phoneNumber(),
-                'address'=> fake()->address(),
                 'status' => fake()->randomElement(['active', 'inactive']),
                 'role' => 'user',
                 'plan_tier' => PlanType::TIER_ONE,

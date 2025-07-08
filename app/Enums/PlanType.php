@@ -4,9 +4,9 @@ namespace App\Enums;
 
 class PlanType
 {
-    const TIER_ONE=1;
-    const TIER_TWO=2;
-    const TIER_THREE= 3;
+    const TIER_ONE = 1;
+    const TIER_TWO = 2;
+    const TIER_THREE = 3;
 
 
 

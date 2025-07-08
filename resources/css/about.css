@@ -1,0 +1,228 @@
+.about-main-container {}
+
+.about-container .pages-header-box {
+  color: var(--white) !important;
+  background-color: var(--primary-color);
+}
+
+.about-container .pages-header-box p {
+  max-width: 70rem;
+}
+
+.about-card-wrapper {
+  background: linear-gradient(var(--white), var(--primary-lite-color)50%);
+  /* background-color: var(--primary-color); */
+  color: var(--secondary-color);
+  flex-wrap: wrap;
+  max-width: 80rem;
+}
+
+.about-wrapper-card {
+  flex-basis: 300px;
+  flex-grow: 1;
+}
+
+.about-wrapper-card img {
+  width: 7rem;
+}
+
+.about-cta-wrapper {
+  background: var(--primary-color);
+  flex-basis: 100px;
+  flex-grow: 2;
+}
+
+.about-founder-message {
+  background: linear-gradient(var(--white)0%, var(--primary-lite-color)100%);
+  max-width: 30rem;
+  margin: auto;
+}
+
+.about-founder-message p {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+}
+
+
+.about-founder-message h5 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-cta-wrapper button {
+  background: var(--white) !important;
+  color: var(--primary-color);
+  /* font-weight: 500; */
+}
+
+.about-cta-wrapper button:hover {
+  background: var(--white) !important;
+}
+
+.about-cta-wrapper {
+  color: var(--white);
+}
+
+.about-founder-message-img-box {
+  min-width: 5rem;
+  width: 3rem;
+  overflow: hidden;
+  border: 0.05rem solid var(--primary-color);
+
+}
+
+.about-founder-message-img-box img {
+  object-fit: cover;
+
+}
+
+
+
+
+
+.about-body.active{
+  overflow: hidden;
+}
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* transform: translate(50%); */
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+.popup .popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--secondary-lite-color);
+}
+
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1.15);
+  /* transition: all 0.1s ease-in-out; */
+
+}
+
+
+
+
+
+.popup-body {
+  background: var(--primary-color);
+  width: 100%;
+  max-width: 20rem;
+  background-color: var(--white);
+  border-radius: 0.3rem;
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: 2px 2px 8px var(--primary-color);
+  padding: 2rem;
+
+}
+
+
+.popup-body.active {
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+
+.popup-body input {
+  width: 100%;
+  margin: 0.7rem;
+  padding: 0.3rem;
+  border: 0;
+  outline: 0;
+  color: var(--white);
+  border-radius: 0.3rem;
+  background-color: var(--primary-lite-color);
+
+}
+
+.popup-body button {
+  width: 100%;
+  border-radius: 0.3rem;
+  color: var(--white);
+  /* background-color: var(--white) !important; */
+  padding: 0.5rem;
+  margin-top: 1rem;
+
+}
+
+
+.closeTimes {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem !important;
+  color: var(--primary-color);
+  background: var(--primary-lite-color);
+  padding: 0.3rem;
+  height: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+#loading{
+ display: none;
+}
+#loading.active{
+ display: inline-block;
+}
+
+
+/* ALERT */
+
+
+.popAlert-body {
+  padding: 0.4rem 1rem;
+  background: var(--white);
+  min-width: 10rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* adds spacing between icon and text */
+  position: fixed;
+  top: 20px;
+  right: -100%;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+  color: var(--success-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.popAlert-body.active {
+  right: 20px;
+  transition: all 0.5s ease-in-out;
+
+
+
+}
+

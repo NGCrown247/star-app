@@ -1,0 +1,49 @@
+
+
+.user-edit-profile-wrapper
+.user-details-wrapper
+.user-img-wrapper{
+    width: 10rem;
+    height: 10rem;
+    min-width: 10rem;
+    max-width: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 0.2rem solid var(--primary-color);
+    /* box-shadow: 0rem 0rem 1rem  var(--primary-color); */
+
+}
+
+
+.user-edit-profile-wrapper
+.user-details-wrapper{
+
+    color: var(--secondary-color);
+
+}
+
+
+.user-edit-profile-wrapper
+.user-details-wrapper
+.user-img-wrapper img{
+    object-fit: cover;
+
+}
+
+.user-edit-profile-wrapper{
+    /* background: var(--primary-lite-color); */
+    max-width: 40rem;
+
+}
+
+
+
+.user-edit-profile-wrapper
+.edit-profile-change-password-header, .user-details{
+  color: var(--primary-color);
+}
+
+.delete-btn{
+    background: var(--bs-danger) !important;
+}
+

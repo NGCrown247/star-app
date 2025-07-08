@@ -1,95 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Notification</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notifications</title>
 
-  @extends('layouts.app')
+    @include('layouts.app')
 </head>
+
 <body>
+    <div class="global-container d-flex flex-column w-100 align-items-center">
 
-  <div class="my-dash-wrapper">
-  @include('layouts.header')
+        @include('layouts.navbar')
+        @include('layouts.sidebar')
 
-
-  <div class="my-container" x-data="pagesApp">
-  <div class="my-dash-row p-4">
-
-    <div class="notification-content w-100 border rounded align-items-center  justify-content-center">
-
-      <h4 class="notification-head w-100">Notifications</h4>
+        <div class="pages-row d-flex flex-column p-2 mt-2 mb-3 w-100 align-items-center rounded">
 
 
-      <ul class="notification-ul d-flex flex-column w-100 align-items-center ">
-        <li class="notification-item w-100 " @click="readNotification()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, velit?
-          <i class='bx bx-chevron-right'></i>
-        </li>
-        <div class="divider"></div>
+            <div class="video-container shadow p-3 rounded-2 m-auto d-flex gap-2 w-100">
+                <div class="pages-header-box d-flex flex-column align-items-center w-100 position-relative p-2">
 
-        <li class="notification-item w-100"  @click="readNotification()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, velit?
-          <i class='bx bx-chevron-right'></i>
-
-        </li>
-        <div class="divider"></div>
-        <li class="notification-item w-100"  @click="readNotification()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, velit?
-          <i class='bx bx-chevron-right'></i>
-
-        </li>
-        <div class="divider"></div>
-        <li class="notification-item w-100"  @click="readNotification()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, velit?
-          <i class='bx bx-chevron-right'></i>
-
-        </li>
-        <div class="divider"></div>
-        <li class="notification-item w-100"  @click="readNotification()">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, velit?
-          <i class='bx bx-chevron-right'></i>
-
-        </li>
-      </ul>
-    </div>
+                    {{-- @include('layouts.arrow-icon') --}}
+                    <h4 class="text-center w-100 mb-2">Notifications</h4>
+                </div>
 
 
+                <div class="accordion accordion-flush w-100 gap-2 d-flex flex-column">
+                    <div class="accordion-item rounded-1 border-0  w-100">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-btn collapsed border-0 w-100 d-flex justify-content-between gap-3"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                aria-expanded="false" aria-controls="flush-collapseOne">
 
-  </div>
+                                <div class="notification-details-wrap d-flex flex-column w-100 notification-preview">
+                                    <div class="notification-details-title-wrap mb-1 d-flex align-items-center gap-2">
+                                        <h6 class="mb-0 fw-bold">Withdrawal Successful</h6>
+                                        <div class="notification-time-date text-end d-flex">
+                                            <small class="text-muted">3h ago</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">
+                                        Dear <span class="fw-bold">Frank</span>, your withdrawal was successful. Please
+                                        allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                    </p>
+                                </div>
+
+
+                            </button>
+                        </h2>
+
+                        <!-- Fake target to trigger collapse -->
+                        <div id="flush-collapseOne" class="accordion-collapse" data-bs-parent=".accordion"></div>
+                    </div>
+
+
+                    {{-- ------------notification 2-----------  --}}
+
+                    <div class="accordion-item rounded-1 border-0 shadow-sm w-100">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-btn collapsed border-0 w-100 d-flex justify-content-between gap-3"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2"
+                                aria-expanded="false" aria-controls="flush-collapseOne">
+
+                                <div class="notification-details-wrap d-flex flex-column w-100 notification-preview">
+                                    <div class="notification-details-title-wrap mb-1 d-flex align-items-center gap-2">
+                                        <h6 class="mb-0 fw-bold">Withdrawal Successful</h6>
+                                        <div class="notification-time-date text-end d-flex">
+                                            <small class="text-muted">3h ago</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">
+                                        Dear <span class="fw-bold">Frank</span>, your withdrawal was successful. Please
+                                        allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                    </p>
+                                </div>
+
+
+                            </button>
+                        </h2>
+
+                        <!-- Fake target to trigger collapse -->
+                        <div id="flush-collapse2" class="accordion-collapse" data-bs-parent=".accordion"></div>
+                    </div>
+
+
+                    {{-- ------------notification 3-----------  --}}
+
+                    <div class="accordion-item rounded-1 border-0 shadow-sm w-100">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-btn collapsed border-0 w-100 d-flex justify-content-between gap-3"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3"
+                                aria-expanded="false" aria-controls="flush-collapseOne">
+
+                                <div class="notification-details-wrap d-flex flex-column w-100 notification-preview">
+                                    <div class="notification-details-title-wrap mb-1 d-flex align-items-center gap-2">
+                                        <h6 class="mb-0 fw-bold">Withdrawal Successful</h6>
+                                        <div class="notification-time-date text-end d-flex">
+                                            <small class="text-muted">3h ago</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">
+                                        Dear <span class="fw-bold">Frank</span>, your withdrawal was successful. Please
+                                        allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                    </p>
+                                </div>
+
+
+                            </button>
+                        </h2>
+
+                        <!-- Fake target to trigger collapse -->
+                        <div id="flush-collapse3" class="accordion-collapse" data-bs-parent=".accordion"></div>
+                    </div>
+
+
+                    {{-- ------------notification 4-----------  --}}
+
+                    <div class="accordion-item rounded-1 w-100">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-btn collapsed border-0 w-100 d-flex justify-content-between gap-3"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4"
+                                aria-expanded="false" aria-controls="flush-collapseOne">
+
+                                <div class="notification-details-wrap d-flex flex-column w-100 notification-preview">
+                                    <div class="notification-details-title-wrap mb-1 d-flex align-items-center gap-2">
+                                        <h6 class="mb-0 fw-bold">Withdrawal Successful</h6>
+                                        <div class="notification-time-date text-end d-flex">
+                                            <small class="text-muted">3h ago</small>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">
+                                        Dear <span class="fw-bold">Frank</span>, your withdrawal was successful. Please
+                                        allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                        your withdrawal was successful. Please allow 24 to 48 hours for the funds
+                                        to reflect in your account. If you do not receive the funds within this period,
+                                        kindly contact us for assistance.
+                                    </p>
+                                </div>
+
+
+                            </button>
+                        </h2>
+
+                        <!-- Fake target to trigger collapse -->
+                        <div id="flush-collapse4" class="accordion-collapse" data-bs-parent=".accordion"></div>
+                    </div>
 
 
 
 
 
+                </div>
 
 
-  <div class="modal fade" id="notificationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-
-        <div class="modal-body p-5">
-          <h4 class="notificationModal-head">Lorem Announcement</h4>
-          <p  class="notificationModal-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius quo deleniti tempore velit! Accusantium iste sit magnam aut labore ducimus quasi officiis, facere, omnis amet similique voluptatum ex quibusdam dicta nesciunt voluptates illum porro? Distinctio dolores, velit natus, similique ex voluptas incidunt porro culpa dolorum rerum tenetur sapiente aperiam laborum suscipit repellendus pariatur excepturi reprehenderit ullam quis! Temporibus ratione dolorum earum adipisci ipsam ut fuga at rem pariatur! Laboriosam, mollitia molestias pariatur magni fuga beatae illum, nobis, dolores cupiditate error fugit recusandae quasi neque praesentium similique velit excepturi unde laudantium ipsa minima accusantium! Animi eos aut maiores dolores asperiores?</p>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          {{-- <button type="button" class="btn btn-primary">Understood</button> --}}
-        </div>
-      </div>
+
+        {{-- @include('layouts.footer-copyright') --}}
     </div>
-  </div>
-
-
-
-
-
-
-
-  </div>
-  </div>
-
-
 </body>
+
 </html>

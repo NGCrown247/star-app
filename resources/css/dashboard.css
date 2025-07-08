@@ -1,0 +1,239 @@
+.my-dashboard-nav {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(var(--secondary-color)50%, var(--primary-color)200%);
+
+    backdrop-filter: blur(30px);
+    z-index: 2;
+
+}
+
+.dashboard-user-profile{
+  display: flex;
+}
+
+.dashboard-user-profile .dashboard-user-profile-img-box {
+    width: 2rem;
+    height: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dashboard-user-profile .dashboard-user-profile-img-box img {
+    object-fit: cover;
+}
+
+.dashboard-user-profile .dashboard-welcome-user-text {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+
+.dash-sidebar {
+    position: fixed;
+    background: linear-gradient(var(--secondary-color)50%, var(--primary-color)200%);
+    /* top: 5.1rem; */
+    left: -100%;
+    min-width: 10rem;
+    max-width: 18rem;
+    height: 100%;
+    min-height: 100%;
+    display: flex !important;
+    overflow-y: auto;
+    color: var(--white);
+    z-index: 999;
+    transition: left 0.5s ease-in-out;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+
+.dash-sidebar.active {
+    left: 0;
+}
+
+
+.support-icon-box{
+  background: var(--white);
+
+}
+.support-icon-box i{
+  color: var(--primary-color);
+
+}
+
+.dash-back-drop {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    transition: opacity 1s ease;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dash-back-drop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.dash-sidebar-ul .nav-link {
+    border-radius: 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    transition: 0.50s ease-in-out;
+}
+
+.dash-sidebar-ul .nav-link:hover {
+    background: radial-gradient(circle, var(--primary-color) 50%, var(--secondary-color));
+    transform: scale(0.98);
+    transition: 0.50s ease-in-out;
+}
+
+.dash-sidebar-ul {
+    overflow-y: auto;
+}
+
+
+/* DASHBOARD CARD */
+
+.my-dashboard-card-wrapper .my-dashboard-card {
+    color: var(--white);
+    flex-direction: column;
+    border-bottom: 1px solid var(--primary-color);
+    position: relative;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease-in-out;
+    background: radial-gradient( circle at left, var(--primary-color), var(--secondary-color));
+}
+
+.my-dashboard-card-user {
+    color: var(--second-color);
+    background: radial-gradient(circle at 100% top, var(--primary-color),var(--secondary-color) 50%);
+
+
+    /* border: 1px solid var(--primary-color); */
+    padding: 1rem !important;
+}
+
+.user-dash-withdraw-btn-box .dash-withdraw {
+    background: var(--white);
+    color: var(--secondary-color);
+
+
+}
+
+.my-dashboard-total-withdrawal h5 {
+    color: var(--white);
+}
+
+.user-dash-withdraw-btn-box .dash-withdraw-history {
+    color: var(--white);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+
+
+.dash-all-withdrawal-amount,
+.dash-all-withdrawal-accum-amount {
+    color: var(--white);
+    font-size: 0.8rem;
+
+}
+
+.my-dashboard-card-wrapper .my-dashboard-card .dash-number-text {
+    color: var(--white);
+}
+
+.my-dashboard-card-user .dash-user-plan-box h5 {
+    font-size: 0.8rem;
+    background: radial-gradient(circle at 34% center, var(--primary-color) 10%, var(--secondary-color) 50%);
+    color: var(--white);
+    white-space: nowrap;
+}
+
+/* .my-dashboard-card-user .dash-user-plan-box h5 span {
+    color: var(--primary-color);
+} */
+
+.my-dashboard-card-user .dash-user-plan-box .dash-boost-btn {
+    color: var(--black-color);
+    background: var(--white);
+    padding: 0.2rem;
+}
+
+
+
+
+/* DASHBOARD DROPDOWN */
+
+.dash-user-profile  {
+    background: var(--white) !important;
+    border: 0.01rem solid var(--primary-color);
+    z-index: 9999 !important;
+     position: relative;
+}
+
+.dropdown-menu {
+    background: var(--primary-color) !important;
+   position: absolute;
+    z-index: 9999 !important;
+    border: 0.02rem solid var(--primary-color) !important;
+}
+
+
+
+
+.dropdown-menu .dropdown-item{
+    color: var(--white);
+    border-radius: 2rem;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    color: var(--white);
+    background-color: var(--lite-white);
+}
+
+
+.dropdown-menu i,
+.dropdown-menu label{
+  color: var(--white);
+}
+
+#darkModeToggle{
+  border: var(--primary-color) !important;
+}
+
+#darkModeToggle:checked{
+  background-color: var(--secondary-color);
+}
+
+
+#darkModeToggle:focus{
+  box-shadow: 0px 0px 0.4rem var(--primary-color) !important;
+  /* border: 0.1rem solid var(--primary-color) !important; */
+
+}
+
+
+/* DASHBOARD NAV ITEM DROPDOWN /TASK/*/
+
+/* .task-dropdown:focus .task-dropdown-icon{
+  transform: rotate(-180deg);
+  transition: transform 0.5s ease;
+}
+
+ .task-dropdown-icon{
+  transition: transform 0.5s ease;
+
+ } */

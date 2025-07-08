@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Users;
 
+use App\Enums\PlanType;
 use App\Enums\TransactionStatus;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PlanRequest;
@@ -19,6 +20,8 @@ use Illuminate\Validation\Rules\Email;
 
 class PlanController extends Controller
 {
+
+
 
 
   //  PAYSTACK PAYMENT
@@ -211,7 +214,9 @@ return response()->json(["message"=> "Transaction verified successfully"],200);
 
 
 
-//------------------------------------------------------
+
+
+//---------------------------RETURN ALL PLANS---------------------------
     public function planList()
     {
          return view("admin.plans.list");
@@ -219,8 +224,13 @@ return response()->json(["message"=> "Transaction verified successfully"],200);
     public function index()
     {
 
-         return response()->json(['plans'=>Plan::all()],201);
+      $plans = Plan::where('plan_tier', '>', PlanType::TIER_ONE)->get();
+
+      return response()->json(['plans'=>$plans],200);
+
     }
+
+
 
 
     //---------------------------------------------------

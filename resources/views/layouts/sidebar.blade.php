@@ -1,119 +1,134 @@
-<div class="offcanvas offcanvas-start star-sidebar" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
-  <div class="offcanvas-header star-sidebar-header d-flex align-items-center">
-    @include('layouts.logo-svg')
-    @include('component.close-sidebar-btn')
-  </div>
+<nav id="sidebar" class="my-sidebar flex-column  w-100 align-items-center">
 
-  <div class="offcanvas-body">
+    {{-- ----------------LOGO--------------- --}}
+    <div class="sidebar-logo d-flex w-100 p-2 py-3 d-flex align-items-center justify-content-between">
+        @include('layouts.logo')
+
+        <div type="button" id="close-btn"
+            class=" sidebar-close-btn-box d-flex
+                 align-items-center justify-content-center">
+            <i class='bx  bx-x '></i>
+        </div>
+    </div>
+
 
     @guest
 
-    <ul class="navbar-nav star-sidebar-ul" id="accordionFlushExample">
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#">
-          <i class='bx bx-home-heart' ></i>Blog</a>
-      </li>
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#">
-          <i class='bx bx-info-square'></i>About</a>
-      </li>
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#">
-          <i class='bx bx-book-reader'></i>How it works</a>
-      </li>
+        <ul class="my-sidebar-u/ px-2 list-unstyled  w-100 m-0 d-flex flex-column mt-4">
+            <li class=""><a class="nav-link p-3 d-flex align-items-center gap-2"
+               href="{{route('welcome')}}">
+                    <i class='bx  bx-home-circle fs-5'></i>
+                    Home</a></li>
 
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#">
-          <i class='bx bx-comment-check'></i>Reviews</a>
-      </li>
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#">
-          <i class='bx bx-support'></i>Contact</a>
-      </li>
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="#" @click="openEmailVerifyReg()">
-          <i class='bx bxs-user-plus'></i>Register</a>
-      </li>
-      <li class="star-nav-item">
-        <a class="star-nav-link" href="{{ route('users.login-form') }}">
-          <i class='bx bx-log-in-circle' ></i>
-          Login</a>
-      </li>
+            <li class=""><a class="nav-link p-3 d-flex align-items-center gap-2"
+              href="{{route('about')}}">
+                    <i class='bx bx-info-circle fs-5'></i>
+                    About</a></li>
 
-      </ul>
-      @endguest
+            <l class=""><a class="nav-link p-3 d-flex align-items-center gap-2"
+               href="#">
+                    <i class='bx bx-comment-detail fs-5'></i>
+                    Reviews</a></l>
+
+            <li class=""><a class="nav-link p-3 d-flex align-items-center gap-2"
+               href="{{route('user.contact')}}">
+                    <i class='bx  bx-headphone fs-5'></i> Contact</a></li>
+        </ul>
 
 
 
-
-
-@auth
-    <!-- AUTHENTICATED -->
-    <ul class="navbar-nav star-sidebar-ul accordion accordion-flush" id="accordionFlushExample">
-
-      <li class="nav-item star-nav-item">
-        <a class="nav-link star-nav-link" href="{{ route('users.dashboard') }}">
-          <i class='bx bxl-windows'></i>Dashboard
-        </a>
-      </li>
-
-      <li class="nav-item star-nav-item">
-        <a class="nav-link star-nav-link" href="{{ route('user.notification') }}">
-          <i class='bx bxs-bell'></i>Notifications
-        </a>
-      </li>
-
-  <!-- Activities Dropdown -->
-<li class="nav-item star-nav-item">
-  <a class="nav-link star-nav-link d-flex justify-content-between align-items-center collapsed"
-     data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-    <i class='bx bxs-bookmark-alt-minus'></i> Tasks
-    <i class="bi bi-chevron-down toggle-icon"></i>
-  </a>
-  <div id="flush-collapseOne" class="accordion-collapse collapse p-0 mt-2 star-sidebar-dropdown" data-bs-parent="#accordionFlushExample">
-    <ul class="nav flex-column">
-      <li class="nav-item"><a href="{{ route('users.playVideo') }}" class="nav-link star-nav-dropdown-link">Play Video</a></li>
-      <li class="nav-item"><a href="{{ route('play.music') }}" class="nav-link star-nav-dropdown-link">Play Music</a></li>
-      <li class="nav-item"><a href="#" class="nav-link star-nav-dropdown-link">Countdown Engagement</a></li>
-    </ul>
-  </div>
-</li>
-
-      <!-- Recruits -->
-      <li class="nav-item star-nav-item">
-        <a class="nav-link star-nav-link" href="{{ route('users.referral') }}">
-          <i class='bx bxs-group'></i> Referrals
-        </a>
-      </li>
-
-
-       <!-- Withdrawal Dropdown -->
-       <li class="nav-item star-nav-item">
-        <a class="nav-link star-nav-link" href="{{ route('users.wallet') }}">
-          <i class='bx bxs-group'></i> Wallet
-        </a>
-      </li>
-
-
-       <!-- Settings Dropdown -->
-       <li class="nav-item star-nav-item">
-        <a class="nav-link star-nav-link d-flex justify-content-between align-items-center collapsed"
-           data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapsetwo">
-          <i class='bx bxs-bookmark-alt-minus'></i> Settings
-          <i class="bi bi-chevron-down toggle-icon"></i>
-        </a>
-        <div id="flush-collapse3" class="accordion-collapse collapse p-0 mt-2 star-sidebar-dropdown" data-bs-parent="#accordionFlushExample">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a href="#" class="nav-link star-nav-dropdown-link">Profile</a></li>
-            <li class="nav-item"><a href="#" class="nav-link star-nav-dropdown-link" @click="handleLogout()">Logout</a></li>
-          </ul>
+        <div class="my-sidebar-action-button-wrapper w-100 align-items-center d-flex flex-column gap-2 p-2">
+            @include('layouts.actions-btn')
         </div>
-      </li>
-
-@endauth
+    @endguest
 
 
-    @include('layouts.social-icons')
-  </div>
-</div>
 
+    @auth
+
+        <ul class="dash-sidebar-ul px-1 pb-4 list-unstyled w-100 mt-4 m-0 d-flex flex-column" id="sidebarAccordion">
+
+            <li>
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="{{ route('dashboard') }}">
+                    <i class='bx bxs-dashboard fs-5'></i> Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="{{ route('user.notification') }}">
+                    <i class='bx bxs-bell fs-5'></i> Notifications
+                </a>
+            </li>
+
+            <!-- Tasks Dropdown -->
+            <li class="accordion-item">
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="#collapseTasks" data-bs-toggle="collapse"
+                    role="button" aria-expanded="false" aria-controls="collapseTasks">
+                    <i class='bx bxs-checkbox-checked fs-5'></i> Tasks
+                    <i class='bx bx-chevron-down ms-auto'></i>
+                </a>
+                <ul id="collapseTasks" class="collapse list-unstyled ms-4" data-bs-parent="#sidebarAccordion">
+                    <li><a href="{{ route('video') }}" class="nav-link d-flex align-items-center gap-2 p-3">
+                      <i class='bx bxs-videos fs-5'></i> Watch Video</a></li>
+                    <li><a href="{{ route('music') }}" class="nav-link d-flex align-items-center gap-2 p-3">
+                      <i class='bx bxs-music fs-5'></i> Play Music</a></li>
+                    <li><a href="{{ route('articles') }}" class="nav-link d-flex align-items-center gap-2 p-3">
+                            <i class='bx bx-news  fs-5'></i>
+                           Read Articles</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="{{ route('user.referral') }}">
+                    <i class='bx bxs-group fs-5'></i> Invite a friend
+                </a>
+            </li>
+
+            <!-- Account Settings Dropdown -->
+            <li class="accordion-item">
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="#collapseAccount" data-bs-toggle="collapse"
+                    role="button" aria-expanded="false" aria-controls="collapseAccount">
+                    <i class='bx bxs-brightness fs-5'></i>Settings
+                    <i class='bx bx-chevron-down ms-auto'></i>
+                </a>
+
+                <ul id="collapseAccount" class="collapse list-unstyled ms-4" data-bs-parent="#sidebarAccordion">
+                    <li>
+                        <a href="{{ route('user.profile') }}" class="nav-link d-flex align-items-center gap-2 p-3">
+                            <i class='bx bxs-user fs-5'></i> Profile
+                        </a>
+                        {{-- <a href="{{ route('add-bank') }}" class="nav-link d-flex align-items-center gap-2 p-3">
+                        <i class='bx bxs-bank fs-5'></i> Add Bank
+                    </a> --}}
+                    </li>
+
+                    <li class="d-flex align-items-center gap-2 px-2 py-2">
+                        <i class='bx bx-moon fs-5'></i>
+                        <span class="flex-grow-1">Dark Mode</span>
+                        <div class="form-check form-switch m-0">
+                            <input class="form-check-input" type="checkbox" id="darkModeToggle" />
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="{{ route('user.contact') }}">
+                    <i class='bx bx-support'></i> Chat With Us
+                </a>
+            </li>
+
+            <li>
+                <a class="nav-link p-3 d-flex align-items-center gap-2" href="{{ route('user.contact') }}">
+                    <i class='bx bx-log-out'></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+    @endauth
+
+
+
+</nav>
+<div class="back-drop" id="back-drop"></div>

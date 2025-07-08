@@ -27,7 +27,6 @@ export default function userApp() {
             full_name: "",
             email: "",
             phone_number: "",
-            address: "",
             password: "",
             new_password:"",
             image:null
@@ -261,7 +260,7 @@ handleSubmit() {
           this.btnDisabled = true;
           this.isLoading = true;
 
-          axios.post('/users/auth/users-login', this.userForm)
+          axios.post('/users/auth/login', this.userForm)
               .then(res => {
                       this.closeModal('loginModal');
                       console.log('User logged in successfully', res.data);
@@ -285,10 +284,10 @@ handleSubmit() {
 // -------------------------------------------------------------------------
 
         userLogout(){
-          axios.post('/users/auth/logout')
+          axios.post('/users/logout')
           .then(res => {
             console.log('Logout Successful', res.data);
-          window.location.href = '/'; // Direct URL
+          window.location.href = '/login'; // Direct URL
 
           })
         },
